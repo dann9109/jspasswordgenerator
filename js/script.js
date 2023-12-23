@@ -16,6 +16,9 @@ var wantsUppercase = confirm('Include uppercase characters?');
 var wantsNumbers = confirm('Include numbers?');
 var wantsSpecialCharacters = confirm('Include special characters?');
 
+
+
+
 // Select the password text box element from the DOM
 var textBox = document.querySelector('#password');
 
@@ -24,6 +27,14 @@ function generatePassword() {
   // Reset password and characterSet before generating a new password
   password = '';
   characterSet = [];
+
+
+  // password character requirement between 8 and 128 characters
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert('Password length must be between 8 and 128 characters.');
+    // Exit the function if the password length is invalid
+    return;
+  }
 
   // Check user choices and add respective character sets to the main characterSet
   if (wantsLowercase) {
@@ -47,7 +58,11 @@ function generatePassword() {
 
   // Set the value of the textarea to the generated password
   textBox.value = password;
-}
+};
+
+
+
+
 
 // Add an event listener to the generate button to call the generatePassword function when clicked
 generateBtn.addEventListener("click", generatePassword);
