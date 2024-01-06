@@ -2,7 +2,7 @@
 This is a simple web application that allows users to generate random passwords based on their selected criteria. The application runs in the browser and features a clean and polished user interface that adapts to multiple screen sizes.
 
 
-![Password Generator](images/pgenerator.PNG)
+![Password Generator](pgenerator.PNG))
 
 ### Features 
 Generates passwords with customizable criteria
